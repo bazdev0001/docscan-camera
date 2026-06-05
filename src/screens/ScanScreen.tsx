@@ -12,6 +12,7 @@ import { CameraViewComponent } from '../components/CameraView';
 import { DocumentPreview } from '../components/DocumentPreview';
 import { AnalysisView } from '../components/AnalysisView';
 import { analyzeDocumentImage } from '../services/aiService';
+import { saveDocument } from '../services/storage';
 import { DocumentAnalysisResult } from '../types';
 
 type RootStackParamList = {
@@ -54,6 +55,15 @@ export function ScanScreen({ navigation }: ScanScreenProps) {
     try {
       const result = await analyzeDocumentImage(photoBase64);
       setAnalysisResult(result);
+
+      // Save to local storage
+      try {
+        await saveDocument(photoBase64, result);
+      } catch (storageError) {
+        console.error('Failed to save document:', storageError);
+        // Don't fail analysis if storage fails
+      }
+
       setScreenState('results');
     } catch (error) {
       const errorMessage =
