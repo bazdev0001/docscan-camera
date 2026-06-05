@@ -14,12 +14,12 @@ function getStorageDirectory(): Directory {
 
 export async function ensureStorageDir(): Promise<void> {
   const storageDir = getStorageDirectory();
-  if (!storageDir.exists) {
-    try {
+  try {
+    if (!storageDir.exists) {
       await storageDir.create();
-    } catch (error) {
-      console.error('Failed to create storage directory:', error);
     }
+  } catch (error) {
+    console.error('Failed to create storage directory:', error);
   }
 }
 
