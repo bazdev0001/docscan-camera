@@ -1,17 +1,29 @@
 {
   "expo": {
-    "name": "docscan-tmp",
-    "slug": "docscan-tmp",
+    "name": "docscan-camera",
+    "slug": "docscan-camera",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nousresearch.docscancamera",
+      "infoPlist": {
+        "NSCameraUsageDescription": "DocScan needs camera access to scan documents"
+      }
     },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "DocScan needs camera access to scan documents"
+        }
+      ]
+    ],
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#000000",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"

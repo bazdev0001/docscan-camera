@@ -1,0 +1,5 @@
+export const CONFIG = {
+  ANTHROPIC_API_KEY: process.env.EXPO_PUBLIC_ANTHROPIC_API_KEY || '',
+  ANTHROPIC_MODEL: 'claude-sonnet-4-20250514',
+  MAX_IMAGE_SIZE: 4 * 1024 * 1024,
+};
