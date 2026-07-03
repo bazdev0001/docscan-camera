@@ -8,7 +8,7 @@
     "userInterfaceStyle": "dark",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.nousresearch.docscancamera",
+      "bundleIdentifier": "com.bazdev0001.docscancamera",
       "infoPlist": {
         "NSCameraUsageDescription": "DocScan needs camera access to scan documents"
       }
@@ -22,6 +22,7 @@
       ]
     ],
     "android": {
+      "package": "com.bazdev0001.docscancamera",
       "adaptiveIcon": {
         "backgroundColor": "#000000",
         "foregroundImage": "./assets/android-icon-foreground.png",
