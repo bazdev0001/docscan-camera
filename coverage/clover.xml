@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1783845551539" clover="3.2.0">
+  <project timestamp="1783845551539" name="All files">
+    <metrics statements="14" coveredstatements="14" conditionals="13" coveredconditionals="12" methods="4" coveredmethods="4" elements="31" coveredelements="30" complexity="0" loc="14" ncloc="14" packages="3" files="3" classes="3"/>
+    <package name="components.ui">
+      <metrics statements="4" coveredstatements="4" conditionals="13" coveredconditionals="12" methods="1" coveredmethods="1"/>
+      <file name="Button.tsx" path="/home/barry/projects/docscan-camera/components/ui/Button.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="13" coveredconditionals="12" methods="1" coveredmethods="1"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="constants">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="colors.ts" path="/home/barry/projects/docscan-camera/constants/colors.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="hooks">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="useAuth.ts" path="/home/barry/projects/docscan-camera/hooks/useAuth.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

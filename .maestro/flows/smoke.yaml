@@ -1,0 +1,5 @@
+appId: com.apex.docscancamera
+---
+- launchApp
+- assertVisible: "Sign in to continue"
+- tapOn: "Sign In"

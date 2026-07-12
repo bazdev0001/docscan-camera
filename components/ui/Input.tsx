@@ -1,0 +1,63 @@
+import React from 'react';
+import { View, Text, TextInput, StyleSheet } from 'react-native';
+import { Colors } from '../../constants/colors';
+import { InputProps } from '../../types';
+
+export const Input = ({
+  value,
+  onChangeText,
+  placeholder,
+  secureTextEntry = false,
+  label,
+  error,
+  keyboardType = 'default',
+  autoCapitalize = 'sentences',
+}: InputProps): React.JSX.Element => {
+  return (
+    <View style={styles.container}>
+      {label && <Text style={styles.label}>{label}</Text>}
+      <TextInput
+        style={[styles.input, error ? styles.inputError : null]}
+        value={value}
+        onChangeText={onChangeText}
+        placeholder={placeholder}
+        placeholderTextColor={Colors.textSecondary}
+        secureTextEntry={secureTextEntry}
+        keyboardType={keyboardType}
+        autoCapitalize={autoCapitalize}
+        testID="input"
+      />
+      {error && <Text style={styles.errorText}>{error}</Text>}
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    marginBottom: 16,
+  },
+  label: {
+    fontSize: 14,
+    fontWeight: '500',
+    color: Colors.text,
+    marginBottom: 4,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: Colors.border,
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 12,
+    fontSize: 16,
+    color: Colors.text,
+    backgroundColor: Colors.surface,
+  },
+  inputError: {
+    borderColor: Colors.error,
+  },
+  errorText: {
+    fontSize: 12,
+    color: Colors.error,
+    marginTop: 4,
+  },
+});

@@ -13,8 +13,8 @@ function getStorageDirectory(): Directory {
 }
 
 export async function ensureStorageDir(): Promise<void> {
-  const storageDir = getStorageDirectory();
   try {
+    const storageDir = getStorageDirectory();
     if (!storageDir.exists) {
       await storageDir.create();
     }
