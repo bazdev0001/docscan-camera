@@ -48,7 +48,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   extra: {
     eas: {
-      projectId: 'docscan-camera',
+      projectId: '6cba3039-35e2-43d2-819b-12a0257d43e8',
     },
   },
 });
