@@ -1,5 +1,7 @@
 {
-  "cli": { "version": ">= 5.0.0" },
+  "cli": {
+    "version": ">= 5.0.0"
+  },
   "build": {
     "development": {
       "developmentClient": true,
@@ -7,11 +9,22 @@
     },
     "preview": {
       "distribution": "internal",
-      "ios": { "simulator": false }
+      "ios": {
+        "simulator": false
+      }
     },
     "production": {}
   },
   "submit": {
-    "production": {}
+    "production": {
+      "ios": {
+        "appleId": "barry_au_yeung@yahoo.com",
+        "ascAppId": "",
+        "appleTeamId": "36M5AD7X5C",
+        "ascApiKeyPath": "/home/barry/apex/AuthKey_K3DJLR35C6.p8",
+        "ascApiKeyIssuerId": "dc468167-29a5-4451-ac60-e59532a39cae",
+        "ascApiKeyId": "K3DJLR35C6"
+      }
+    }
   }
 }
