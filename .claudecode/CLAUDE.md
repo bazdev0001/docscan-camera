@@ -1,5 +1,30 @@
 # DocScan Camera — Claude Code Context
 
+*Read this file FIRST, before asking Barry anything about environment, access, or
+credentials. If the answer isn't here, check `PORTFOLIO-CLAUDE.md` at the Apex portfolio
+level before asking a human.*
+
+## Run command
+`npx expo run:ios` — **NOT `npm start` / `expo start`**. SDK 57 + expo-router needs a
+dev-client build; the README still says `expo start`, that's stale, ignore it.
+
+## Access & credentials — where things actually live (as of 2026-07-13)
+- **This repo's remote**: `https://github.com/bazdev0001/docscan-camera.git`, currently
+  public (clone works with no auth). Push access requires credentials not present by
+  default in a fresh cloud sandbox.
+- **GitHub push credentials**: same situation portfolio-wide — MCC pushes via macOS
+  Keychain on Barry's Mac; Sage has a personal access token given directly by Barry
+  (2026-07-13), stored on her side, not visible cross-environment. A cloud/sandboxed agent
+  without push access should connect this repo's folder via the device bridge (same as
+  bankruptcy-app) rather than asking Barry where a token file is.
+- **Apple Developer**: Team ID `36M5AD7X5C`, Apple ID `barry_au_yeung@yahoo.com`.
+- **EAS account**: `bazdev0001`, metered billing.
+- **App Store Connect record**: does NOT exist yet (`ascAppId: ""` in `eas.json`). Same
+  manual-web-UI-required step as every other app in the portfolio — see bankruptcy-app's
+  process for what worked.
+- **This app's own Claude API key**: `EXPO_PUBLIC_CLAUDE_API_KEY` — separate from any other
+  app's key; not shared portfolio-wide.
+
 ## Architecture
 - Expo Router for file-based routing (app/ directory)
 - Firebase Auth for all authentication
