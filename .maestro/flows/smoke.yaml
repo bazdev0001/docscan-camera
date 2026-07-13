@@ -1,5 +1,26 @@
 appId: com.apex.docscancamera
 ---
+# Auth-screen navigation smoke test — verified against actual screen source
+# (app/(auth)/sign-in.tsx, app/(auth)/sign-up.tsx), no test account needed.
+# Real logged-in flows (camera capture, Claude Vision analysis, doc history)
+# need a seeded Firebase test account — not scriptable until MCC/Sage set one up.
 - launchApp
+- assertVisible: "DocScan Camera"
 - assertVisible: "Sign in to continue"
+- assertVisible: "Email"
+- assertVisible: "Password"
+
+# Sign-in form fields accept input (does not submit — no test credentials yet)
+- tapOn: "Enter your email"
+- inputText: "test@example.com"
+- tapOn: "Enter your password"
+- inputText: "placeholder123"
+- hideKeyboard
+
+# Navigate to sign-up and confirm its fields render
+- tapOn: "Sign Up"
+- assertVisible: "Create Account"
+
+# Navigate back to sign-in
 - tapOn: "Sign In"
+- assertVisible: "DocScan Camera"
