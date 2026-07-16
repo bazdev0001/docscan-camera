@@ -10,7 +10,8 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.apex.docscancamera",
       "infoPlist": {
-        "NSCameraUsageDescription": "DocScan needs camera access to scan documents"
+        "NSCameraUsageDescription": "DocScan needs camera access to scan documents",
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "plugins": [
